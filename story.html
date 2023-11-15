@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lav prisutvikling for boliger i Østre Toten</title>
+    <link href="storystyle.css" rel="stylesheet" media="all">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Prisutvikling Kommune Østre Toten (Innlandet)</h1>
+            <a href="#introduction">Start historien</a>
+        </div>
+    </header>
+    <section class="scrollContainer" id="introduction">
+        <div class="scrollText"><p><sup></sup> Østre Toten kommune er en kommune i Innlandet fylke. Kommunen grenser
+        til kommunene Vestre Toten i vest, Gjøvik og Ringsaker i nord og Hurdal i sør.
+        Mjøsa ligger mot øst. Prisutviklingen for boliger (eneboliger og blokkleiligheter) i Østre Toten sammenlignet med de
+        andre nabokommunene,
+        gjennom de tre siste årene stiller dem med mest prisøkning totalt, og mest på eneboliger og nummer to på
+        blokkleiligheter. Merk at dette er gjennomsnittlig. Den kommunen med høyest gjennomsnittlig pris for boliger ikke er det
+        samme..</p></div>
+        <div class="scrollText"><H2>Eneboliger og blokkleiligheter 2020</H2>
+        <p>I 2020 lå boligprisen for eneboliger og blokkleiligheter i Østre Toten kommune på respektivt, 16 850kr og 30 227kr.
+            Dette er i snitt 2 627 kr lavere for eneboliger og 4 916 kr for blokkleiligheter, sammenlignet med nabokommunene.
+            Merknad: For Hurdal kommune fantes det ikke data for blokkleiligheter, bare eneboliger.</p>
+        </div>
+        <div class="scrollText"><h2>Eneboliger og blokkleiligheter 2021</h2>
+        <p>I 2021 lå boligprisene for eneboliger og blokkleiligheter i Østre Toten kommune på respektivt, 18 931kr og 30 134kr.
+            Det
+            er en markant økning for eneboliger, men ikke noen særlig økning for prisen på blokkleiligheter. Dette er i snitt
+            ca. 2
+            276kr lavere for eneboliger og 9 476 kr lavere for blokkleiligheter.Merknad: For Hurdal kommune fantes det ikke data
+            for
+            blokkleiligheter, bare eneboliger</p></div>
+    </section>
+    <section class="textSection">
+        ><h1></h1>
+        <div style="min-height:341px"><div style="min-height:309px">
+            <div style="min-height:309px">
+<div style="min-height:309px">
+    <div style="min-height:337px">
+
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    </section>
+    <section id="changingBg" class="scrollContainer">
+        <div id="decline" class="scrollText">
+            <h2>Eneboliger og blokkleiligheter 2022</h2>
+            
+            <p>I 2020 lå boligprisene for eneboliger og blokkleiligheter i Østre Toten kommune på respektivt, 21 191 kr og 33 168 kr.
+            Det er en markant økning for eneboliger, og en nokså stor prisøkning på blokkleiligheter. Dette er i snitt ca. 11 437
+            lavere for eneboliger og 8 051 kr lavere for blokkleiligheter. Merknad: For Hurdal kommune fantes det ikke data for
+            blokkleiligheter, bare eneboliger.</p>
+        </div>
+
+    </section>
+
+    <script>
+
+        //Function to check if element is in viewport
+        function isInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                //Improved check of viewport for elements exceeding viewport height
+                (rect.top <= 0 && rect.bottom >= 0) || 
+                (rect.top >= 0 && rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth))
+            );
+        }
+
+        //Make a check when page scrolls:
+        document.addEventListener('scroll', function () {
+            //If a specific id is in the viewport...
+            if(isInViewport(document.getElementById("decline"))) {
+                //...change the parent elements background image
+                document.getElementById("changingBg").style.backgroundImage = "url(https://lokalhistoriewiki.no/images/Beck_Ner-Skjefstad.jpg)"
+            }
+            if(isInViewport(document.getElementById("increase"))) {
+                document.getElementById("changingBg").style.backgroundImage = "url(https://lokalhistoriewiki.no/images/Beck_Ner-Skjefstad.jpg)"
+            }
+            if(isInViewport(document.getElementById("comparisonchart"))) {
+                document.getElementById("changingBg").style.backgroundImage = "url(https://lokalhistoriewiki.no/images/Beck_Ner-Skjefstad.jpg)"
+            }
+
+        }, {
+            passive: true
+        });
+    </script>
+</body>
+</html>
